@@ -157,7 +157,7 @@ int main(int argc, char** argv)
     std::cout<<"numFrames:\t"<<numFrames<<std::endl;
     
     fseek(logfile,0,SEEK_SET);
-    fwrite(&numFrames,sizeof(int64_t),1,logfile);
+    fwrite(&numFrames,sizeof(int32_t),1,logfile);
     fflush(logfile);
     fclose(logfile);   
     std::cout<<"fwrite finished !"<<std::endl;
